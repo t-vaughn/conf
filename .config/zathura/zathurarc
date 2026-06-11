@@ -9,6 +9,8 @@ set selection-clipboard     "clipboard"
 set selection-notification  false
 set statusbar-home-tilde    true
 set window-title-home-tilde true
+set pages-per-row 2
+set first-page-column 1:1
 
 set completion-bg           "#504945" # bg2
 set completion-fg           "#ebdbb2" # fg
