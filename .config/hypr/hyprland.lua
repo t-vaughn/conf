@@ -11,6 +11,7 @@ require("monitors")
 -- Set programs that you use
 local terminal = "alacritty"
 local menu     = "tofi-drun --drun-launch=true"
+local browser  = "firefox"
 
 -------------------
 ---- AUTOSTART ----
@@ -23,7 +24,7 @@ local menu     = "tofi-drun --drun-launch=true"
 --
 hl.on("hyprland.start", function()
   hl.exec_cmd(terminal)
-  hl.exec_cmd("firefox")
+  hl.exec_cmd(browser)
 end)
 
 
@@ -244,6 +245,7 @@ hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + T", hl.dsp.layout("togglesplit")) -- dwindle only
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("zathura"))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 
 -- Move focus with mainMod + hjkl
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
